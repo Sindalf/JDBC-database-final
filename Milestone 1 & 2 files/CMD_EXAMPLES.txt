@@ -1,0 +1,34 @@
+cmd examples
+
+createUsers: 1 fname lname email "1984-10-13"
+initiateFriendship: 2 50 55
+establishFriendship: 3 55 50
+displayFriends: 4 55
+createGroup: 5 groupname groupdescrip 100
+addToGroup: 6 55 9
+sendMessageToUser: 7 subject body 12 55
+sendMessageToGroup: 8 subject body 9 55
+displayMessages: 9 12
+displayNewMessages: 10 12
+searchForUser: 11 Sharon
+threeDegrees: 12 66 41 
+2 hops: 12 25 100 
+1 hop: 12 4 16
+topMessages: 13 10 15
+dropUser: 14 55
+
+java JDBC_part2  method number        [arguments]
+             1: [createUser]          (String fname, String lname, String email, String dob)
+             2: [initiateFriendship]  (int sender, int receiver)
+             3: [establishFriendship] (int sender, int receiver)
+             4: [displayFriends]      (int owner]
+             5: [createGroup]         (String name, String description, int limit)
+             6: [addToGroup]          (int user, int group]
+             7: [sendMessageToUser]   (String subject, String body, int recipient, int owner)
+             8: [sendMessageToGroup]  (String subject, String body, int group, int owner)
+             9: [displayMessages]     (int owner)
+            10: [displayNewMessages]  (int owner)
+            11: [searchForUser]       (String searchString)
+            12: [threeDegrees]        (String userA, String userB)
+            13: [topMessages]         (String k, String x)
+            14: [dropUser]            (int id)

@@ -1,0 +1,174 @@
+
+This size of Users is 1
+This size of Friendships is 0
+This size of User_groups is 0
+This size of Group_membership is 0
+This size of Messages is 0
+This size of Recipients is 0
+
+Testing createUser
+Finished testing createUser
+
+This size of Users is 10001
+This size of Friendships is 0
+This size of User_groups is 0
+This size of Group_membership is 0
+This size of Messages is 0
+This size of Recipients is 0
+
+Testing initiateFriendship
+Finished testing initiateFriendship
+
+This size of Users is 10001
+This size of Friendships is 4949
+This size of User_groups is 0
+This size of Group_membership is 0
+This size of Messages is 0
+This size of Recipients is 0
+
+Testing establishFriendship
+Finished testing establishFriendship
+
+This size of Users is 10001
+This size of Friendships is 14156
+This size of User_groups is 0
+This size of Group_membership is 0
+This size of Messages is 0
+This size of Recipients is 0
+
+Testing displayFriends
+Finished testing displayFriends
+The last output for displayFriends() was  Elmore Conti is friends with  Orah Lowery and has an established friendship
+
+This size of Users is 10001
+This size of Friendships is 14156
+This size of User_groups is 0
+This size of Group_membership is 0
+This size of Messages is 0
+This size of Recipients is 0
+
+Testing createGroup
+Finished testing createGroup
+
+This size of Users is 10001
+This size of Friendships is 14156
+This size of User_groups is 4494
+This size of Group_membership is 0
+This size of Messages is 0
+This size of Recipients is 0
+
+Testing addToGroup
+Finished testing addToGroup
+
+This size of Users is 10001
+This size of Friendships is 14156
+This size of User_groups is 4494
+This size of Group_membership is 9841
+This size of Messages is 0
+This size of Recipients is 0
+
+Testing sendMessageToUser
+Finished testing sendMessageToUser
+
+This size of Users is 10001
+This size of Friendships is 14156
+This size of User_groups is 4494
+This size of Group_membership is 9841
+This size of Messages is 5000
+This size of Recipients is 5000
+
+Testing displayMessages
+Finished testing displayMessages
+The last output for displayMessages() was 
+ Msg_ID: 2563 
+Sender_ID: 47 
+time_sent: 2016-04-27 20:11:03.356 
+subject: pigmy 
+Body  pigmy looms.
+
+This size of Users is 10001
+This size of Friendships is 14156
+This size of User_groups is 4494
+This size of Group_membership is 9841
+This size of Messages is 5000
+This size of Recipients is 5000
+
+Testing sendMessageToGroup
+Finished testing sendMessageToGroup
+
+This size of Users is 10001
+This size of Friendships is 14156
+This size of User_groups is 4494
+This size of Group_membership is 9841
+This size of Messages is 10000
+This size of Recipients is 14729
+
+Testing displayNewMessages
+Finished testing displayNewMessages
+The last output for displayNewMessages() was 
+ Msg_ID: 9232 
+Sender_ID: 297 
+time_sent: 2016-04-27 20:11:52.511 
+subject: Evert 
+Body  Evert pave crutches tranquilizer's.
+
+This size of Users is 10001
+This size of Friendships is 14156
+This size of User_groups is 4494
+This size of Group_membership is 9841
+This size of Messages is 10000
+This size of Recipients is 14729
+
+Testing SearchForUser
+Finished testing SearchForUser
+The last output for SearchForUser() was 
+    USER_ID: 9704 
+     FNAME:  Signa 
+     LNAME:  Boling 
+     EMAIL:  Boling66@fakeemail.com 
+       DOB: 1928-01-04 
+LAST_LOGIN: 2016-04-27 20:09:02.751
+
+This size of Users is 10001
+This size of Friendships is 14156
+This size of User_groups is 4494
+This size of Group_membership is 9841
+This size of Messages is 10000
+This size of Recipients is 14729
+
+Testing threeDegrees
+Finished testing threeDegrees
+The last output for ThreeDegrees() was  Kelly Ragland ->  Mahalia Westmoreland ->  Philomene Sager
+
+This size of Users is 10001
+This size of Friendships is 14156
+This size of User_groups is 4494
+This size of Group_membership is 9841
+This size of Messages is 10000
+This size of Recipients is 14729
+
+Testing topMessagers
+Finished testing topMessagers
+The last output for TopMessagers() was 
+ Top 3 for the past 13 months
+ 409 handled a total of 50 messages
+ 363 handled a total of 49 messages
+ 329 handled a total of 47 messages
+
+This size of Users is 10001
+This size of Friendships is 14156
+This size of User_groups is 4494
+This size of Group_membership is 9841
+This size of Messages is 10000
+This size of Recipients is 14729
+
+Testing dropUser
+Finished testing dropUser
+
+This size of Users is 7427
+This size of Friendships is 7395
+This size of User_groups is 4494
+This size of Group_membership is 7079
+This size of Messages is 9002
+This size of Recipients is 10594
+

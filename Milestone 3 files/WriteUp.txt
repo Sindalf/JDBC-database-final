@@ -1,0 +1,67 @@
+WriteUp. We use about 10k users, 15k friendships, 4500 groups and 10k messages not including the recipients. This section can take about 3mins or so to finish. You may notice that even though we are adding 5k friendships when we initiate Friendships but only about 4949 friendships are in the database. This is intended. 
+
+All of our data is randomized without taking into consideration the constraits on the database. This means that integrity constraints will be violated throughout our stress test. For example if a group named swimming tries to create a new group when swimming already exists or when someone tries to join a full group or when you try to establish a friendship that already exists in the database. Dupelicates are not checked for either so friendships which have already been made will try to be added to the database. We decided to keep these in to show that our driver will continue working as intended and the databases constraints will hold even under heavy conditions. 
+
+There are 87 integrity constraints violated.
+There are 103 max membership constraints violated.
+There is one exception due to trying to remove the user_id 0 which is enforced to stay in our database as the deleted user value.
+Rest are exceptions due to group name uniqueness being enforced and then trying to join that group.
+
+You can find all this data in the large file "verbose large sample output.txt".
+
+As per the TA's request we have removed verbose output and lowered our query size from 4000 to 100 on non table altering queries as it would have created over 700k lines worth of data to shift through and anaylize, about 22mb text document. I have added "verbose large sample output.txt" that should give you a give idea at what things looked like back then before I reduced the output size. 
+
+
+Please note that displayMessages updates the last_login when a user successfully reads their messages. For the sake of easy use on the graders part displayNewMessages does not update this value. This is so you can run the query more than once without being confused as to why data is missing suddenly. 
+
+EstablishFriend will delete the reverse friendship from the database as we only need one set to establish a bilateral friendship. See example under the method below. 
+
+Please read CMD_EXAMPLES.txt if you want a sample overview on some user defined input values. 
+
+
+Extra details on each method.
+
+CreateUsers((String fname, String lname, String email, String dob))
+	Creates a new user. Last_Login is automatically generated based on current time. 
+	User_id 0 is a special user that is used to retain messages in case we decide to delete a user. This way user and group messages are retained for the receivers to view.
+
+		
+initiateFriendship(int sender, int receiver)
+	Initiates an unconfirmed friendship between two users
+	
+establishFriendship(int sender, int receiver)
+	Establishes a bilateral friendship between two users. Once established the reverse friendship is looked up and deleted. For example if id_1=user5 and id_2=user7 establish a bilateral friendship then we look for an initiated friendship where id_1=user7 and id_2=user5 and delete that from the database to reduce redundancy. 
+	
+displayFriends(int owner)
+	Displays all pending and established friendships for that user.
+	
+createGroup(String name, String description, int limit)
+	Creates a group with a unique name that holds limit members.
+	
+addToGroup(int user, int group)
+	Adds a user to a group. Will not add if limit has been reached.
+	
+sendMessageToUser(String subject, String body, int recipient, int owner)
+	Sends a message to a user. time_sent is automatically generated
+	
+sendMessageToGroup(String subject, String body, int group, int owner)
+	Sends a message to every user in a group. time_sent is automatically generated.
+	
+displayMessages(int owner)
+	Displays all messages for a user. This updates their last_login for the sake of displayNewMessages.
+	
+displayNewMessages(int owner)
+	Displays all newMessages which are newer than the last login time. This method DOES NOT update the last_login time for the sake of easy grader evaluation.
+	
+searchForUser(String[] searchString)
+	Simple search that allows up to N arguments. 
+	
+threeDegrees(int userA, int userB)
+	Finds a connection between users with at most 3hops
+	
+topMessagers(int user_count, int months)
+	See how many K users have handled the most messages in N months.
+
+dropUser(int id)
+	Drops a user from the database.
+	

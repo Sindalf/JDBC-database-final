@@ -1,0 +1,5 @@
+First Last        // gh user    //  pitt id
+------------------------------------------------
+Lauren  Thomson   //  levelyn   //  LET41
+Gregory Hartranft //  sindalf   //  GDH12
+Samuel  Kearns    //  skearns4  //  SEK107
