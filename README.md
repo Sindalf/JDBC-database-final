@@ -1,5 +1,7 @@
 # Term-Project-1555
-The term project for CS 1555: Database Management Systems 
+The term project for CS 1555: Database Management Systems.
+
+All files are provided as is for evaluation purposes. Database URLs have been removed from the public repo for obvious reasons. 
 
 ####Collaborators
 - Lauren Thomson
@@ -9,7 +11,7 @@ The term project for CS 1555: Database Management Systems
 
 Milestone 3 details.
 All files are in the Milestone 3 folder.  
-#  **Please read writeup.txt**
+#  Please read writeup.txt
 
 Getting started
 - Run create_tables_no_data.sql in sqlplus which will also run cleanup.sql
