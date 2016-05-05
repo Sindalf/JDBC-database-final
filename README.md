@@ -11,7 +11,7 @@ All files are provided as is for evaluation purposes. Database URLs have been re
 
 Milestone 3 details.
 All files are in the Milestone 3 folder.  
-#  Please read writeup.txt
+Please read writeup.txt
 
 Getting started
 - Run create_tables_no_data.sql in sqlplus which will also run cleanup.sql
